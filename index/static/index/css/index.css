@@ -1,0 +1,199 @@
+.cormorant-infant-semibold {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.vollkorn-sc-semibold {
+  font-family: "Vollkorn SC", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Основные контейнеры */
+.main {
+    /* Здесь можно добавить стили для основного контейнера */
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin-top: -100px;
+    padding: 250px 0;
+}
+
+.welcome__text {
+    width: 550px;
+    text-align: center;
+}
+
+.welcome__subtitle {
+    margin-bottom: 7px;
+    color: whitesmoke;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+.welcome__title {
+    margin-bottom: 40px;
+    font-size: 58px;
+    color: navajowhite;
+}
+
+.welcome__desc {
+    color: whitesmoke;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+/* Стили для списка участников */
+.members-list {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 150px;
+}
+
+.members__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.members__title {
+    color: navajowhite;
+}
+
+.members-list .container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.members-list__card {
+    width: calc(30% - 10px);
+    overflow: hidden;
+    text-align: center;
+}
+
+.members-list__img {
+    width: 175px;
+    height: 175px;
+    margin-top: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.members-list__name {
+    margin-bottom: 10px;
+    color: navajowhite;
+    font-size: 15px;
+}
+
+.members-list__position {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.members-list__wrapper {
+    padding: 30px 20px;
+}
+
+/* Анимация для появления элементов */
+.info__content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Класс для отображения элемента */
+.info__content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для формы */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 500px; /* Максимальная ширина формы */
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #1e1e1e; /* Темный фон для формы */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для формы */
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form textarea,
+form select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2e2e2e; /* Темный фон для полей ввода */
+    color: whitesmoke;
+    margin-bottom: 10px;
+}
+
+form input[type="text"]:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #4CAF50; /* Зеленый цвет при фокусе */
+}
+
+form button[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+form button[type="submit"]:active {
+    background-color: #3e8e41;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

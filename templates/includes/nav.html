@@ -1,0 +1,31 @@
+{% load static %}
+
+<header class="header">
+    <div class="container">
+        <img src="{% static 'images/logo.png' %}" alt="logo" class="header__logo">
+        <nav class="header__nav">
+            <ul class="header__list vollkorn-sc-black">
+                <li>
+                    <a class="active" href="{% url 'home' %}">ГЛАВНАЯ</a>
+                </li>
+
+                <li>
+                    <a href="#">УСЛУГИ</a>
+                </li>
+
+                <li>
+                    <a href="#">БЛОГ</a>
+                </li>
+
+                <li>
+                    <a href="#">О НАС</a>
+                </li>
+                <li>
+                    <a class="active" href="{% url 'review' %}">ОСТАВИТЬ ОТЗЫВ</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="btn vollkorn-sc-black">КОНСУЛЬТАЦИЯ</a>
+{#        <a href="#" class="btn vollkorn-sc-black">ОСТАВИТЬ ОТЗЫВ</a>#}
+    </div>
+</header>    

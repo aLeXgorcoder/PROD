@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
+    <script src="{% static 'index/js/index.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container info__content">
+        <form action="{% url 'review' %}" method="post" class="review-form">
+            {% csrf_token %}
+
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
+
+
+    <script src="{% static 'index/js/index.js' %}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat:wght@400..700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Marck+Script&display=swap"
+          rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat:wght@400..700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Marck+Script&family=Vollkorn+SC:wght@400;600;700;900&display=swap"
+          rel="stylesheet">
+
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+    <main class="main">
+        <section class="welcome info">
+            <div class="container">
+                <div class="welcome__text info__content">
+                    <h4 class="welcome__subtitle vollkorn-sc-semibold">SMF PRODUCTION</h4>
+                    <h1 class="welcome__title vollkorn-sc-semibold">ПРОФЕССИОНАЛЫ</h1>
+                    <p class="welcome__desc cormorant-infant-semibold">SMF Production — это команда профессионалов,
+                        специализирующаяся
+                        на
+                        создании
+                        высококачественного фото- и видеоконтента для различных сфер бизнеса. Мы понимаем, что
+                        визуальная коммуникация является ключевым элементом успешного брендинга и маркетинга, и
+                        поэтому
+                        стремимся предложить нашим клиентам уникальные решения, соответствующие их индивидуальным
+                        потребностям.</p><br>
+                    <p class="welcome__desc cormorant-infant-semibold">
+                        Наша команда состоит из талантливых фотографов, видеографов и монтажеров, которые используют
+                        современные технологии и креативные подходы для создания впечатляющего контента. Мы работаем
+                        с
+                        клиентами различных отраслей, включая моду, искусство, рекламу и мероприятия, и всегда
+                        находим
+                        индивидуальный подход к каждому проекту.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="members-list info">
+            <div class="members__header info__content">
+                <h1 class="members__title vollkorn-sc-semibold">НАША КОМАНДА</h1>
+            </div>
+            <div class="container">
+                {% for member in team %}
+                    <div class="members-list__card info__content">
+                        <div class="members-list__wrapper">
+                            <img class="members-list__img" src="{{ member.photo.url }}" alt="">
+                            <h4 class="members-list__name vollkorn-sc-semibold">{{ member.name }}</h4>
+                            <p class="members-list__position vollkorn-sc-semibold">{{ member.position }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="reviews-section">
+            <div class="container">
+                {% for r in reviews %}
+                    <div class="review-card info__content">
+                        <div class="review-header">
+                            <strong class="client-name">Клиент: {{ r.client_name }}</strong><br>
+                            <strong class="rating">Рейтинг клиента: {{ r.rating }}★</strong>
+                        </div>
+                        <p class="review-text">Отзыв клиента: {{ r.review_text }}</p>
+                    </div>
+                {% empty %}
+                    <p class="no-reviews">Отзывы пока отсутствуют.</p>
+                {% endfor %}
+            </div>
+        </section>
+
+
+    </main>
+
+{% endblock %}
